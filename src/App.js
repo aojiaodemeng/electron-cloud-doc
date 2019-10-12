@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-=======
 import React,{useState} from 'react'
 import { faPlus, faFileImport } from '@fortawesome/free-solid-svg-icons'
 import SimpleMDE from "react-simplemde-editor";
@@ -159,9 +136,36 @@ function App() {
           
         </div>  
       </div>
->>>>>>> 逻辑实现
     </div>
   );
 }
 
 export default App;
+
+2、新建utils/helper.js
+export const flattenArr = (arr) => {
+    return arr.reduce((map, item) => {
+      map[item.id] = item
+      return map
+    }, {})
+  }
+  
+  export const objToArr = (obj) => {
+    return Object.keys(obj).map(key => obj[key])
+  }
+  
+  export const getParentNode = (node, parentClassName) => {
+    let current = node
+    while(current !== null) {
+      if (current.classList.contains(parentClassName)) {
+        return current
+      }
+      current = current.parentNode
+    }
+    return false
+  }
+  
+  export const timestampToString = (timestamp) => {
+    const date = new Date(timestamp)
+    return date.toLocaleDateString() + ' ' + date.toLocaleTimeString()
+  }

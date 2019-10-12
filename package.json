@@ -4,11 +4,9 @@
   "private": true,
   "main": "main.js",
   "dependencies": {
-<<<<<<< HEAD
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
-=======
+    "react-scripts": "3.2.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
@@ -21,7 +19,6 @@
     "react-scripts": "3.2.0",
     "react-simplemde-editor": "^4.1.0",
     "uuid": "^3.3.3"
->>>>>>> 逻辑实现
   },
   "scripts": {
     "start": "react-scripts start",

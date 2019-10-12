@@ -13,6 +13,10 @@ function createWindow () {
     const urlLocation = isDev ? 'http://localhost:3000' : 'dummyurl'
     
     mainWindow.loadURL(urlLocation)
+<<<<<<< HEAD
+=======
+    mainWindow.webContents.openDevTools()
+>>>>>>> 逻辑实现
   }
   
   app.on('ready', createWindow)
